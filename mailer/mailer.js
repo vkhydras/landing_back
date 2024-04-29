@@ -1,22 +1,20 @@
 const nodemailer = require('nodemailer');
 
-// Create a transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password'
-    }
+        user: 'victorkimaru8@gmail.com',
+        pass: 'hlff gmvg davq mlkk'
+    },
 });
 
-// Function to send email
-const sendEmail1 = async (to, subject, text) => {
+async function sendEmail1 (to, subject, text) {
     try {
         await transporter.sendMail({
-            from: 'your-email@gmail.com',
+            from: 'victorkimaru8@gmail.com',
             to,
             subject,
-            text
+            html:text
         });
         console.log('Email sent successfully');
     } catch (error) {
